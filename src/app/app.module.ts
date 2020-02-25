@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ManagerComponent } from './manager/manager.component';
 import { TeamleadComponent } from './teamlead/teamlead.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { RegComponent } from './reg/reg.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmployeeComponent } from './employee/employee.component';
     AdminComponent,
     ManagerComponent,
     TeamleadComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    RegComponent
   ],
   imports: [
     BrowserModule,

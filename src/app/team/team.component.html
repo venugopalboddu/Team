@@ -2,31 +2,36 @@
     <div class="container-login100" style="background-image: url('assets/images/bg.jpg');">
         <div class="wrap-login100">
             <form class="login100-form validate-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <h6 class="text-center"><b *ngIf="val" style="color: rgb(146, 11, 22)">Invalid Login Credentials</b></h6><br><br>
                 <span class="login100-form-logo">
                     <img src="https://s3.amazonaws.com/myamcatimages/company/images/8527.png" width="100px"/>
                 </span>
                 <br/><br/>
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter username">
-                    <input class="input100" type="text" name="username" placeholder="Username">
+                    <input class="input100" type="text" formControlName="uname" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.uname.errors }">
                     <span class="focus-input100" data-placeholder="&#xf207;"></span>
                 </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
-                    <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                <div *ngIf="submitted && f.uname.errors" class="invalid-feedback">
+                    <div *ngIf="f.uname.errors.required">User Name is required*</div>
                 </div>
-
+                <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <input class="input100" type="password" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required*</div>
+                    </div>
+                </div>
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
                         Login
                     </button>
                 </div>
 
-            </form>
+            </form><br/>
+            <h6 style="color: white">New User? <a routerLink="/reg" style="color: white">Create new account</a></h6>
+            
+           
         </div>
     </div>
 </div>
-
-
-<div id="dropDownSelect1"></div>
