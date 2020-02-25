@@ -17,7 +17,6 @@ export class TeamComponent implements OnInit {
     uname: ['', Validators.required],
     password: ['', Validators.required]
   });
-
   ngOnInit() {
   }
   get f() { return this.form.controls; }

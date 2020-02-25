@@ -9,6 +9,18 @@
       "id": 2,
       "fname": "venu",
       "lname": "hot"
+    },
+    {
+      "email": "venugopal@gmail.com",
+      "uname": "venugopal",
+      "password": "venugopal",
+      "id": 3
+    },
+    {
+      "email": "prasanna@gmail.com",
+      "uname": "prasanna",
+      "password": "orasanna",
+      "id": 4
     }
   ]
 }
