@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fname": "prasanna",
+      "lname": "cool"
+    },
+    {
+      "id": 2,
+      "fname": "venu",
+      "lname": "hot"
+    }
+  ]
+}
