@@ -7,8 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TeamComponent } from './team/team.component';
 import { AdminComponent } from './admin/admin.component';
-import { ManagerComponent } from './manager/manager.component';
-import { TeamleadComponent } from './teamlead/teamlead.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { RegComponent } from './reg/reg.component';
 
@@ -17,8 +15,6 @@ import { RegComponent } from './reg/reg.component';
     AppComponent,
     TeamComponent,
     AdminComponent,
-    ManagerComponent,
-    TeamleadComponent,
     EmployeeComponent,
     RegComponent
   ],

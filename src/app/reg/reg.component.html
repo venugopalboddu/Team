@@ -2,6 +2,8 @@
         <div class="container-login100" style="background-image: url('assets/images/bg.jpg');">
             <div class="wrap-login100">
                 <form class="login100-form validate-form" [formGroup]="form" (ngSubmit)="onSubmit()">  
+                        <h6 class="text-center"><b *ngIf="val" style="color: rgb(146, 11, 22)">Email or username already exists</b></h6>
+                        <h6 class="text-center"><b *ngIf="val1" style="color: rgb(146, 11, 22)">Please fill valid details</b></h6><br><br>
                     <span class="login100-form-logo">
                         <img src="https://s3.amazonaws.com/myamcatimages/company/images/8527.png" width="100px"/>
                     </span>
@@ -30,7 +32,10 @@
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Register
-                        </button>
+                        </button>&nbsp;&nbsp;
+                        <a class="login100-form-btn" routerLink="/home">
+                                Login
+                        </a>
                     </div>
     
                 </form>

@@ -2,25 +2,21 @@
   "posts": [
     {
       "id": 1,
-      "fname": "prasanna",
-      "lname": "cool"
+      "email": "prasanna@gmail.com",
+      "uname": "prasanna",
+      "password": "prasanna"
     },
     {
       "id": 2,
-      "fname": "venu",
-      "lname": "hot"
-    },
-    {
       "email": "venugopal@gmail.com",
       "uname": "venugopal",
-      "password": "venugopal",
-      "id": 3
+      "password": "venugopal"
     },
     {
-      "email": "prasanna@gmail.com",
-      "uname": "prasanna",
-      "password": "prasanna",
-      "id": 4
+      "email": "teja@gmail.com",
+      "uname": "teja",
+      "password": "teja",
+      "id": 3
     }
   ]
 }
