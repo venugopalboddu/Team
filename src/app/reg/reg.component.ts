@@ -21,11 +21,24 @@ export class RegComponent implements OnInit {
   form = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     uname: ['', Validators.required],
-    password: ['', Validators.required]
+    password: ['', Validators.required],
+    course: ['', Validators.required]
   });
+
+  courses: any = ['Manager', 'Teamlead', 'Employee'];
   ngOnInit() {
   }
   get f() { return this.form.controls; }
+
+  changeCourse(e) {
+    console.log(e.value);
+    this.course.setValue(e.target.value, {
+      onlySelf: true
+    });
+  }
+  get course() {
+    return this.form.get('course');
+  }
 
   onSubmit() {
     this.submitted = true;
@@ -38,7 +51,8 @@ export class RegComponent implements OnInit {
     let regDetails = {
       email: this.form.controls['email'].value,
       uname: this.form.controls['uname'].value,
-      password: this.form.controls['password'].value
+      password: this.form.controls['password'].value,
+      course: this.form.controls['course'].value
     };
     if (this.form.invalid) {
       this.val1 = true;
@@ -53,7 +67,7 @@ export class RegComponent implements OnInit {
         this.submitted = false;
       }
     }
-    if(this.status == false) {
+    if (this.status == false) {
         this.s.po(regDetails).subscribe((res)=>{
           console.log("register", res);
           this.router.navigate(['/home']);

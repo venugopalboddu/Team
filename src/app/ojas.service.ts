@@ -24,9 +24,6 @@ export class OjasService {
   isLoggedIn() {
     return this.getToken() !== null;
   }
-  isAdminIn(){
-    return this.getToken() !== null;
-  }
   logout() {
     localStorage.removeItem("LoggedInUser");
     this.myRoute.navigate(["home"]);

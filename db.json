@@ -2,20 +2,23 @@
   "posts": [
     {
       "id": 1,
-      "email": "prasanna@gmail.com",
-      "uname": "prasanna",
-      "password": "prasanna"
+      "email": "shiva@gmail.com",
+      "uname": "shiva",
+      "password": "shiva",
+      "course": "1: Manager"
     },
     {
       "id": 2,
-      "email": "venugopal@gmail.com",
-      "uname": "venugopal",
-      "password": "venugopal"
+      "email": "akram@gmail.com",
+      "uname": "akram",
+      "password": "akram",
+      "course": "2: Teamlead"
     },
     {
-      "email": "teja@gmail.com",
-      "uname": "teja",
-      "password": "teja",
+      "email": "sai@gmail.com",
+      "uname": "sai",
+      "password": "sai",
+      "course": "3: Employee",
       "id": 3
     }
   ]

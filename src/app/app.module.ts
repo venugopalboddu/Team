@@ -9,6 +9,8 @@ import { TeamComponent } from './team/team.component';
 import { AdminComponent } from './admin/admin.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { RegComponent } from './reg/reg.component';
+import { ManagerComponent } from './manager/manager.component';
+import { TeamleadComponent } from './teamlead/teamlead.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { RegComponent } from './reg/reg.component';
     TeamComponent,
     AdminComponent,
     EmployeeComponent,
-    RegComponent
+    RegComponent,
+    ManagerComponent,
+    TeamleadComponent
   ],
   imports: [
     BrowserModule,

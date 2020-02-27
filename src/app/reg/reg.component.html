@@ -29,6 +29,12 @@
                             <div *ngIf="f.password.errors.required">Password is required*</div>
                         </div>
                     </div>
+                 
+                            <select (change)="changeCourse($event)" formControlName="course">
+                                    <option value="">Choose your designation</option>
+                                    <option *ngFor="let cou of courses" [ngValue]="cou">{{cou}}</option>
+                                </select>
+                    <br/><br/>
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Register

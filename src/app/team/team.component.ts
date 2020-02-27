@@ -15,6 +15,7 @@ export class TeamComponent implements OnInit {
   name: any;
   pass: any;
   data: any;
+  man: any;
   status: boolean = false;
   constructor(private fb: FormBuilder, private router: Router, private s: OjasService) { }
   form = this.fb.group({
@@ -26,8 +27,8 @@ export class TeamComponent implements OnInit {
   get f() { return this.form.controls; }
   onSubmit() {
     this.submitted = true;
-    this.name = this.form.controls['uname'].value,
-    this.pass = this.form.controls['password'].value
+      this.name = this.form.controls['uname'].value,
+      this.pass = this.form.controls['password'].value
     this.s.getDetails().subscribe((res) => {
       this.data = res;
       console.log("test", this.data);
@@ -35,12 +36,21 @@ export class TeamComponent implements OnInit {
     if (this.form.invalid) {
       this.val1 = true;
       return;
-    }if(this.name == "admin" && this.pass == "admin"){
+    } if (this.name == "admin" && this.pass == "admin") {
       this.s.sendToken(this.form.value.uname);
       this.router.navigate(['/admin']);
     }
-    for(let i = 0; i < this.data.length; i++) {
-      if (this.data[i].uname == this.name && this.data[i].password == this.pass) {
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i].uname == this.name && this.data[i].password == this.pass && this.data[i].course == "1: Manager") {
+        this.s.sendToken(this.form.value.uname);
+        this.router.navigate(['/manager']);
+        this.status = true;
+      } else if (this.data[i].uname == this.name && this.data[i].password == this.pass && this.data[i].course == "2: Teamlead") {
+        this.s.sendToken(this.form.value.uname);
+        this.router.navigate(['/teamlead']);
+        this.status = true;
+      }
+      else if (this.data[i].uname == this.name && this.data[i].password == this.pass && this.data[i].course == "3: Employee") {
         this.s.sendToken(this.form.value.uname);
         this.router.navigate(['/employee']);
         this.status = true;
