@@ -8,7 +8,6 @@ import { SecuGuard } from './secu.guard';
 import { ManagerComponent } from './manager/manager.component';
 import { TeamleadComponent } from './teamlead/teamlead.component';
 
-
 const routes: Routes = [
   {path: '', component: TeamComponent},
   {path: 'home', component: TeamComponent},

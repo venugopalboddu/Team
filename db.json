@@ -20,6 +20,27 @@
       "password": "sai",
       "course": "3: Employee",
       "id": 3
+    },
+    {
+      "email": "venugopl@gmail.com",
+      "uname": "venugopal",
+      "password": "venugopal",
+      "course": "3: Employee",
+      "id": 4
+    },
+    {
+      "email": "bhanu@gmail.com",
+      "uname": "bhanu",
+      "password": "bhanu",
+      "course": "1: Manager",
+      "id": 5
+    },
+    {
+      "email": "mahesh@gmail.com",
+      "uname": "mahesh",
+      "password": "mahesh",
+      "course": "2: Teamlead",
+      "id": 6
     }
   ]
 }

@@ -15,6 +15,9 @@ export class OjasService {
   po(d) {
     return this.ht.post('http://localhost:3000/posts', d);
   }
+  de(d) {
+    return this.ht.delete('http://localhost:3000/posts/' + d);
+  }
   sendToken(token: string) {
     localStorage.setItem("LoggedInUser", token);
   }
